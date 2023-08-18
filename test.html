@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universities</title>
+    <style>
+      li {
+        margin: 20px;
+        list-style: none;
+      }
+
+      li a {
+        text-decoration: none;
+        color: black;
+        
+      }
+    </style>
+</head>
+<body>
+<!-- <h1>Universities</h1> -->
+<ul id="universities-list"></ul>
+
+<script>
+    async function fetchUniversities() {
+        const response = await fetch("http://13.124.243.146:8080/api/cnu/universities");
+        const universities = await response.json();
+
+        const universitiesList = document.getElementById("universities-list");
+        universities.forEach(university => {
+            const listItem = document.createElement("li");
+
+            const link = document.createElement("a");
+            link.textContent = university.name;
+            link.href = `Test2/${university.id}`; // Fix the link
+
+            listItem.appendChild(link);
+            universitiesList.appendChild(listItem);
+        });
+    }
+
+    fetchUniversities();
+</script>
+</body>
+</html>

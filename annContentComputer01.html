@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 내용</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <style>
+        li {
+            margin: 20px;
+            list-style: none;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <img class="logo" src="./images/엠블럼 (White) A.png" alt="충남대 로고">
+            <a class="title" href="./index.html">
+                <h1 class="title">시각장애인을 위한 학과 공지 알리미</h1>
+            </a>
+        </header>
+        <div class="container">
+            <button id="backButton" onclick="goBack()">⬅</button>
+            <button id="speakButton">🔊</button>
+            <div class="itemTitle"> <!-- 공지사항 제목-->
+                <div id="universities-title0"></div>
+            </div>
+            <div class="itemMain"> <!-- 공지사항 글의 내용-->
+                <div id="universities-list1"></div>
+            </div>
+        </div>
+        <!-- <footer class="footer">
+            <div class="box">
+                뉴식스
+            </div>
+        </footer> -->
+    </div>
+</body>
+</html>
+
